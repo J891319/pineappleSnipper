@@ -5,7 +5,7 @@ var upgrade0Cost = 500;
 var upgrade1Cost = 2000;
 var autoClickerCost = 250;
 var stats = document.getElementById('stats');
-var ppc = document.getElementById('PPC');
+var ppc = document.getElementById('ppc');
 var upgardeButton = document.getElementById('upgradeButton');
 var upgrade0Button = document.getElementById('upgrade0Button');
 var upgarde1Button = document.getElementById('upgrade1Button');
@@ -14,7 +14,7 @@ var autoClickerButton = document.getElementById('autoClick');
 function buyPineapples() {
     totalPineapples = totalPineapples + pineapplesPerClick;
     stats.innerHTML = 'Pineapples Snipped: ' + totalPineapples;
-    ppc.innerHTML = 'Pineapples Per Click: ' + PineapplesPerClick;
+    ppc.innerHTML = 'Pineapples Per Click: ' + pineapplesPerClick;
 }
 
 function upgrade() {
