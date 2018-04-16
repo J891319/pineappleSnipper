@@ -5,6 +5,7 @@ var upgrade0Cost = 500;
 var upgrade1Cost = 2000;
 var autoClickerCost = 250;
 var stats = document.getElementById('stats');
+var ppc = document.getElementById('PPC');
 var upgardeButton = document.getElementById('upgradeButton');
 var upgrade0Button = document.getElementById('upgrade0Button');
 var upgarde1Button = document.getElementById('upgrade1Button');
@@ -13,6 +14,7 @@ var autoClickerButton = document.getElementById('autoClick');
 function buyPineapples() {
     totalPineapples = totalPineapples + pineapplesPerClick;
     stats.innerHTML = 'Pineapples Snipped: ' + totalPineapples;
+    ppc.innerHTML = 'Pineapples Per Click: ' + PineapplesPerClick;
 }
 
 function upgrade() {
@@ -52,7 +54,7 @@ function upgrade1() {
 }
 
 function autoClickerStart() {
-    totalPineapples = totalPineapples + 0.3;
+    totalPineapples = totalPineapples + 0.25;
     stats.innerHTML = 'Pineapples Snipped: ' + totalPineapples;
     //autoClicker;
 }
@@ -62,7 +64,7 @@ function autoClicker() {
         totalPineapples = totalPineapples - autoClickerCost;
         autoClickerCost = autoClickerCost * 1.7;
         setInterval(autoClickerStart, 1000);
-        autoClickerButton.innerHTML = 'auto clicker (+0.3/S): ' + autoClickerCost;
+        autoClickerButton.innerHTML = 'auto clicker (+0.25/S): ' + autoClickerCost;
     } else {
         alert('you do not have enough pineapples!');
     }
